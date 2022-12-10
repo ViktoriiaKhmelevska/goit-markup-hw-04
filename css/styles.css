@@ -22,7 +22,7 @@ html {
   --border-container: #ececec;
   --border-project: #eeeeee;
   --color-icon: #afb1b8;
-  --bgr-color-hero: rgba(47, 48, 58, 0.4);
+  --bgr-color-hero: #c4c4c4;
 }
 
 body {
@@ -213,7 +213,8 @@ img {
   min-height: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: url(../images/overlay.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/overlay.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -277,7 +278,6 @@ img {
 .command {
   text-align: center;
   margin-bottom: 50px;
-
   color: var(--primary-text-color);
   font-weight: 700;
   font-size: 36px;
@@ -291,6 +291,9 @@ img {
 
 .command-li {
   background-color: var(--primary-white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 .title-command {
   color: var(--primary-text-color);
@@ -313,8 +316,33 @@ img {
   padding-bottom: 30px;
 }
 
+.button {
+  padding: 0;
+  border: none;
+  width: 44px;
+  height: 44px;
+  background-color: var(--primary-white-color);
+  border-radius: 50%;
+  color: var(--color-icon);
+}
+
+.button:hover {
+  color: var(--primary-white-color);
+  background-color: var(--button-link-color);
+}
+
 .command-icon {
-  fill: var(-color-icon);
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.command-icons {
+  padding: 12px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
 }
 
 /* Style Portfolio */
