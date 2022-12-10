@@ -85,7 +85,7 @@ img {
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 354px;
+  gap: 318px;
 }
 
 .site-nav {
@@ -127,27 +127,40 @@ img {
 }
 .auth-nav {
   display: flex;
+  align-self: center;
   margin-left: 0;
 }
 .auth-nav .item + .item {
-  margin-left: 40px;
+  margin-left: 30px;
 }
 
 .site-nav-contact {
-  display: block;
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
-
+  align-items: center;
   color: var(--accent-color);
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
 }
+/* .site-nav-contact::before {
+  content: '';
+  height: 10px;
+  width: 16px;
+  background-color: red;
+  background-image: url(../images/icons.svg#icon-smartphone);
+} */
 
 .site-nav-contact:hover,
 .site-nav-contact:focus {
   color: var(--button-link-color);
+}
+
+.icon-phone {
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 .logo,
@@ -213,7 +226,7 @@ img {
   min-height: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/overlay.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -254,8 +267,19 @@ img {
   line-height: 1.71;
 }
 
+.benefits-svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 270px;
+  height: 120px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
 .section-three {
-  padding-top: 94px;
   padding-bottom: 94px;
 }
 
@@ -308,6 +332,7 @@ img {
 }
 
 .filter-command {
+  margin-bottom: 10px;
   color: var(--accent-color);
   font-size: 16px;
   line-height: 1.19;
@@ -341,7 +366,6 @@ img {
 }
 
 .command-icons {
-  padding: 12px;
   display: flex;
   gap: 10px;
   justify-content: center;
@@ -441,6 +465,7 @@ img {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   color: var(--color-icon);
+  background-color: var(--primary-white-color);
 }
 
 .button-client:hover {
