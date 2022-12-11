@@ -23,6 +23,7 @@ html {
   --border-project: #eeeeee;
   --color-icon: #afb1b8;
   --bgr-color-hero: #c4c4c4;
+  --bgr-button-footer: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -354,7 +355,8 @@ img {
   color: var(--color-icon);
 }
 
-.button:hover {
+.button:hover,
+.button:focus {
   color: var(--primary-white-color);
   background-color: var(--button-link-color);
 }
@@ -417,6 +419,8 @@ img {
 .filter:focus {
   background-color: var(--button-link-color);
   color: var(--primary-white-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .title-project {
@@ -442,6 +446,13 @@ img {
   flex-wrap: wrap;
   flex-basis: calc((100% - 60px / 3));
 }
+
+.project-item:hover,
+.project-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .project-link {
   text-decoration: none;
 }
@@ -468,7 +479,8 @@ img {
   background-color: var(--primary-white-color);
 }
 
-.button-client:hover {
+.button-client:hover,
+.button-client:focus {
   color: var(--button-link-color);
   border: 1px solid var(--button-link-color);
 }
@@ -537,17 +549,58 @@ button {
   border: none;
   border-radius: 4px;
 }
-/* .section {
-  padding-top: 94px;
-} */
 
 .link {
   text-decoration: none;
   color: inherit;
 }
 
-/* .list {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-} */
+.footer-nav {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+
+.footer-social {
+  padding: 0;
+  margin-top: -62px;
+  display: block;
+}
+
+.social-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.social-item {
+  width: 44px;
+  height: 44px;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background-color: var(--bgr-button-footer);
+  border-radius: 50%;
+  fill: var(--primary-white-color);
+  width: 44px;
+  height: 44px;
+}
+
+.social-links:hover,
+.social-links:focus {
+  fill: var(--primary-white-color);
+  background-color: var(--button-link-color);
+}
+
+.join {
+  margin: 0 0 20px 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+}
